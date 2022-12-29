@@ -11,6 +11,7 @@
     <?php
     echo("Hari ini ".date("l")."<br>");
     echo("Tanggal ".date("d F Y")."<br>");
+    date_default_timezone_set('Asia/Jakarta');
     echo("Jam ".date("H:i:s"));
     ?>
 </body>

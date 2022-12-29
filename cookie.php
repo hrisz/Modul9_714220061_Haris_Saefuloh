@@ -1,8 +1,8 @@
 <?php
-if (isset($HTTP_POST_VARS["no_Induk"]))
+if (isset($_POST["no_induk"]))
 {
-    setcookie("cookie no_induk ",$HTTP_POST_VARS["no_induk"]);
-}
+    setcookie("cookie_no_induk",$_POST["no_induk"]);
+}   
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -14,16 +14,14 @@ if (isset($HTTP_POST_VARS["no_Induk"]))
 </head>
 <body>
     <h2>Penggunaan cookies</h2>
-    <pre>
-        <form action="cookie.php" method="post">
+        <form action="cookie.php" method="POST">
             No. Induk : <input type="text" name="no_induk" size="10"><input type="submit" name="go" value="GO">
         </form>
         <?php
-        if (isset($HTTP_POST_VARS["no_induk"]))
+        if (isset($_POST["no_induk"]))
         {
             echo("Klik <a href=\"cek_cookie.php\">disini</a> untuk melihat data cookies");
         }
         ?>
-    </pre>
 </body>
 </html>

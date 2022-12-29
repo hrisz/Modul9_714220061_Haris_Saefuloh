@@ -9,11 +9,6 @@
 </head>
 
 <body>
-    <?php
-    $file1="";
-    $file1 = isset($_POST['file1']) ? $_POST['file1']:'';
-    $file1 = !empty($_POST['file1']) ? $_POST['file1'] : '';
-    ?>
     <h2>Penggunaan upload</h2>
     <form action="proses_upload.php" method="POST" enctype="multipart/form-data">
         File : <input type="file" name="file1"> <input type="submit" name="upload" value="upload">
